@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Pod request access landing page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@100;200;300;400;700;900&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/root.css">
+
+  <script src="js/script.js" defer></script>
+
+</head>
+
+  <body>
+
+    <!--===== CONTAINER =====-->
+    <div class="container">
+
+
+      <!--===== HEADER =====-->
+      <header>
+        <div class="header--img-wrap">
+          <img
+            class="header--img"
+            src="assets/desktop/logo.svg"
+            alt="pod logo"
+          >
+        </div>
+      </header>
+
+
+      <!--===== MAIN =====-->
+      <main>
+
+
+        <!--===== CONTENT =====-->
+        <div class="content-wrap">
+
+          <!-- ***** H1 -->
+          <h1>
+            Publish your podcasts
+            <br>
+            <span>everywhere.</span>
+          </h1>
+
+          <!-- ***** PARAGRAPH -->
+          <p>
+            Upload your audio to Pod with a single click. We&#39;ll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!
+          </p>
+
+          <!-- ***** LOGOS MOBILE -->
+          <div class="logos-wrap--mob">
+            <a
+              href="https://www.spotify.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/desktop/spotify.svg"
+                alt="spotify logo"
+                class="logos--spotify--mob"
+              >
+            </a>
+            <a
+              href="https://www.apple.com/apple-podcasts/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/desktop/apple-podcast.svg"
+                alt="apple podcast logo"
+                class="logos--apple--mob"
+              >
+            </a>
+            <a
+              href="https://podcasts.google.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/desktop/google-podcasts.svg"
+                alt="google podcasts logo"
+                class="logos--google--mob"
+              >
+            </a>
+            <a
+              href="https://pocketcasts.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/desktop/pocket-casts.svg"
+                alt="pocket casts logo"
+                class="logos--pocketcasts--mob"
+              >
+            </a>
+          </div>
+
+          <!-- ***** FORM CONTENT -->
+          <!-- _____ FORM-WRAPPER -->
+          <div class="form-wrap">
+
+            <!-- '''''' FORM -->
+            <form
+              id="emailForm"
+              novalidate
+            >
+              <input
+                class="form--input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email address"
+                required
+              >
+              <button
+                class="form--btn"
+                type="submit"
+              >
+                Request Access
+              </button>
+            </form>
+
+            <!-- '''''' FORM MSGS -->
+            <!-- ..... ERROR MSG -empty -->
+            <div
+              class="form--error form--message"
+              id="error-message-empty"
+            >
+              Oops! Please add your email
+            </div>
+            <!-- ..... ERROR MSG -invalid -->
+            <div
+              class="form--error form--message"
+              id="error-message-invalid"
+            >
+              Oops! Please check your email
+            </div>
+            <!-- ..... SUCCESS MSG -->
+            <div
+              class="form--success form--message"
+              id="success-message"
+            >
+              Done! Check your inbox
+            </div>
+
+          </div>
+
+          <!-- ***** LOGOS (TABLET, DESKTOP)-->
+          <div class="logos-wrap">
+            <a
+              href="https://www.spotify.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/desktop/spotify.svg"
+                alt="spotify logo"
+                class="logos--spotify"
+              >
+            </a>
+            <a
+              href="https://www.apple.com/apple-podcasts/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/desktop/apple-podcast.svg"
+                alt="apple podcast logo"
+                class="logos--apple"
+              >
+            </a>
+            <a
+              href="https://podcasts.google.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/desktop/google-podcasts.svg"
+                alt="google podcasts logo"
+                class="logos--google"
+              >
+            </a>
+            <a
+              href="https://pocketcasts.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="assets/desktop/pocket-casts.svg"
+                alt="pocket casts logo"
+                class="logos--pocketcasts"
+              >
+            </a>
+          </div>
+
+        </div>
+
+
+        <!--===== DOTS =====-->
+        <div class="dots-wrap">
+          <img
+            src="assets/desktop/bg-pattern-dots.svg"
+            alt=""
+          >
+        </div>
+
+
+      </main>
+
+
+    </div>
+
+
+    <!--===== FOOTER =====-->
+    <footer class="attribution">
+      Challenge by <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+      >Frontend Mentor</a>.
+      Coded by <a
+        href="https://github.com/Nix7amcm"
+        target="_blank"
+      >Nix7amcm⚡</a>.
+
+    </footer>
+
+
+  </body>
+
+
+</html>

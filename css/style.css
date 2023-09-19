@@ -1,0 +1,662 @@
+/* ===== GLOBAL RESET ===== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ----- reset for browser default form styles */
+legend,
+fieldset,
+select,
+textarea,
+input,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* ===== BODY ===== */
+
+body {
+  /*@ make footer stick to the bottom using flex: https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14 */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  padding-top: clamp(3.125rem, -0.589rem + 7.738vw, 6.375rem);
+  /* ::::: padding-left added to container to allow footer to be centered */
+  /* padding-left: clamp(2.5rem, -1.214rem + 7.738vw, 5.75rem); */
+
+  background-color: var(--bg-body);
+  color: var(--fc-body);
+
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  font-style: var(--fstyle-body);
+  font-weight: var(--fw-body);
+  line-height: var(--lh-body);
+}
+
+/* ))) TABLET & TABLET LANDSCAPE ((( */
+@media all and (min-width: 480px) and (max-width: 1024px) {
+  body::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.7993;
+    background: url(/assets/tablet/image-host.jpg) no-repeat top right;
+  }
+}
+
+/* ))) TABLET ((( */
+@media all and (min-width: 480px) and (max-width: 768px) {
+  body {
+    padding-top: 3.125rem;
+    /* padding-left: 2.4375rem; */
+
+    font-size: var(--fs-body-tab);
+    font-weight: var(--fw-body-tab);
+    line-height: var(--lh-body-tab);
+  }
+}
+
+/* ))) MOBILE LANDSCAPE AND BELOW ((( */
+@media all and (max-width: 480px) {
+  body {
+    padding-inline: clamp(0.625rem, -1.125rem + 8.75vw, 1.5rem);
+    padding-top: 3.875rem;
+
+    font-size: var(--fs-body-mob);
+    line-height: var(--lh-body-mob);
+    background-size: cover;
+  }
+
+  body::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: 100%;
+    opacity: 0.15;
+    background: url(/assets/mobile/image-host.jpg) no-repeat;
+    background-size: cover;
+  }
+}
+
+
+/* ===== CONTAINER ===== */
+
+/* >>> Added container to exclude header & main from footer */
+.container {
+  /* ----- margin between footer & container */
+  margin-bottom: 3.125rem;
+}
+
+/* ))) ABOVE MOBILE LANDSCAPE ((( */
+@media all and (min-width: 480px) {
+  .container {
+    padding-left: clamp(0.625rem, -1.938rem + 8.542vw, 5.75rem);
+    /*::::: padding added to left of container instead of body to allow footer to be centered to body */
+  }
+}
+
+
+/* ===== HEADER ===== */
+
+header {
+  position: relative;
+  z-index: 1;
+}
+
+/* ))) MOBILE LANDSCAPE & BELOW ((( */
+@media all and (max-width: 480px) {
+  .header--img-wrap {
+    text-align: center;
+  }
+}
+
+
+/* ===== MAIN ===== */
+
+main {
+  position: relative;
+  margin: auto;
+  padding-top: 8.25rem;
+  /*<---custom (131 figma top mask overlap)*/
+  transform: translateY(-1.75rem);
+}
+
+main::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7993;
+  background: url(/assets/desktop/image-host.jpg)no-repeat top right;
+}
+
+/* ))) TABLET LANDSCAPE ((( */
+@media all and (max-width: 1024px) {
+  main {
+    background: none;
+    padding-top: 9.0625rem;
+    /*<---custom (103 figma) */
+    transform: unset;
+  }
+
+  main::before {
+    display: none;
+  }
+}
+
+
+/* ))) TABLET ((( */
+@media all and (max-width: 768px) {
+  main {
+    padding-top: 9.375rem;
+    /*<---custom (152 figma) */
+  }
+}
+
+/* ))) MOBILE LANDSCAPE & BELOW ((( */
+@media all and (max-width: 480px) {
+  main {
+    padding-top: 3.5625rem;
+  }
+}
+
+
+/* ===== CONTENT ===== */
+
+.content-wrap {
+  position: relative;
+  width: clamp(39.688rem, 33.402rem + 13.095vw, 45.188rem);
+  height: 31.8125rem;
+  padding-top: 5.5rem;
+  background-color: var(--bg-content);
+}
+
+/* ))) TABLET ((( */
+@media all and (max-width: 768px) {
+  .content-wrap {
+    /* width: 39.6875rem; */
+    width: clamp(29.344rem, 12.104rem + 57.465vw, 39.688rem);
+  }
+}
+
+/* ))) MOBILE LANDSCAPE & BELOW ((( */
+@media all and (max-width: 480px) {
+  .content-wrap {
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+    text-align: center;
+    background: none;
+  }
+}
+
+
+/* ***** H1 ***** */
+
+h1 {
+  color: var(--fc-h1);
+  font-family: var(--ff-h1);
+  font-size: var(--fs-h1);
+  font-style: var(--fstyle-h1);
+  font-weight: var(--fw-h1);
+  line-height: var(--lh-h1);
+  text-transform: uppercase;
+}
+
+h1 span {
+  color: var(--fc-h1-span);
+}
+
+/* ))) TABLET ((( */
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: var(--fs-h1-tab);
+    line-height: var(--lh-h1-tab);
+  }
+}
+
+/* ))) MOBILE LANDSCAPE ((( */
+@media all and (max-width: 480px) {
+  h1 {
+    font-size: var(--fs-h1-mob);
+    line-height: var(--lh-h1-mob);
+  }
+}
+
+/* ))) SMALL MOBILE AND BELOW ((( */
+@media all and (max-width: 351px) {
+  h1 {
+    font-size: var(--fs-h1-sm-mob);
+  }
+}
+
+
+/* ***** PARAGRAPH ***** */
+
+p {
+  width: 27.8125rem;
+  margin-block: 1.5rem 2.5rem;
+
+  color: var(--fc-p);
+  font-family: var(--ff-p);
+  font-size: var(--fs-p);
+  font-style: var(--fstyle-p);
+  font-weight: var(--fw-p);
+  line-height: var(--lh-p);
+}
+
+/* ))) TABLET ((( */
+@media all and (max-width: 768px) {
+  p {
+    font-size: var(--fs-p-tab);
+    line-height: var(--lh-p-tab);
+  }
+}
+
+/* ))) MOBILE LANDSCAPE & MOBILE ((( */
+@media all and (max-width: 480px) {
+  p {
+    width: 100%;
+    margin-block: 1rem 2.125rem;
+
+    font-size: var(--fs-p-mob);
+    line-height: var(--lh-p-mob);
+  }
+}
+
+/* ))) SMALL MOBILE & BELOW ((( */
+@media all and (max-width: 351px) {
+  p {
+    font-size: var(--fs-p-sm-mob);
+  }
+}
+
+
+/* ***** FORM CONTENT ***** */
+
+/* _____ FORM-WRAPPER _____ */
+
+.form-wrap {
+  width: 26.6875rem;
+  height: 4.875rem;
+  margin-block: 2.5rem 2.625rem;
+}
+
+/* ))) MOBILE LANDSCAPE & BELOW ((( */
+@media all and (max-width: 480px) {
+  .form-wrap {
+    width: 100%;
+    height: 8.125rem;
+    margin: auto;
+  }
+}
+
+
+/* '''''' FORM '''''' */
+
+form {
+  width: 26.6875rem;
+  height: 3.5rem;
+  padding: .3125rem .3125rem .3125rem 2rem;
+  background-color: var(--bg-form);
+  border-radius: var(--bdrs-form);
+}
+
+/* ))) MOBILE LANDSCAPE & BELOW ((( */
+@media all and (max-width: 480px) {
+  form {
+    width: 100%;
+    max-width: 20.4375rem;
+    height: auto;
+    margin: auto;
+    padding: 0;
+    background-color: unset;
+  }
+}
+
+
+/* ..... FORM INPUT ..... */
+
+.form--input::placeholder {
+  color: var(--fc-inp-ph);
+}
+
+.form--input {
+  width: 13.9375rem;
+  color: var(--fc-inp-act);
+  font-size: var(--fs-inp);
+  font-style: var(--fstyle-inp);
+  font-weight: var(--fw-inp);
+  line-height: var(--lh-inp);
+}
+
+/* ))) TABLET ((( */
+@media all and (max-width: 768px) {
+  .form--input {
+    font-size: var(--fs-inp-tab);
+    line-height: var(--lh-inp-tab);
+  }
+}
+
+/* ))) MOBILE LANDSCAPE & MOBILE ((( */
+@media all and (max-width: 480px) {
+  .form--input {
+    width: 100%;
+    height: 2.625rem;
+    margin-bottom: 1rem;
+    padding-inline: 2rem;
+    background-color: var(--bg-form);
+    border-radius: var(--bdrs-inp);
+    font-size: var(--fs-inp-mob);
+    line-height: var(--lh-inp-mob);
+  }
+}
+
+/* ))) SMALL MOBILE & BELOW ((( */
+@media all and (max-width: 351px) {
+  .form--input {
+    font-size: clamp(0.75rem, -1.185rem + 9.677vw, 0.938rem);
+  }
+}
+
+
+/* ..... FORM BUTTON ..... */
+
+.form--btn:hover {
+  background-color: var(--bg-btn-hov);
+  color: var(--fc-btn-hov);
+  font-weight: var(--fw-btn-hov);
+  cursor: pointer;
+}
+
+.form--btn {
+  width: 10.125rem;
+  height: 2.875rem;
+
+  background-color: var(--bg-btn);
+  box-shadow: var(--bxs-btn);
+  border-radius: var(--bdrs-btn);
+
+  color: var(--fc-btn);
+  font-family: var(--ff-btn);
+  font-size: var(--fs-btn);
+  font-style: var(--fstyle-btn);
+  font-weight: var(--fw-btn);
+  line-height: var(--lh-btn);
+}
+
+/* ))) TABLET ((( */
+@media all and (max-width: 768px) {
+  .form--btn {
+    font-size: var(--fs-btn-tab);
+    line-height: var(--lh-btn-tab);
+  }
+}
+
+/* ))) MOBILE LANDSCAPE & MOBILE ((( */
+@media all and (max-width: 480px) {
+  .form--btn {
+    width: 100%;
+    height: 2.625rem;
+    margin-bottom: .5rem;
+
+    font-size: var(--fs-btn-mob);
+    line-height: var(--lh-btn-mob);
+  }
+}
+
+/* ))) SMALL MOBILE & BELOW ((( */
+@media all and (max-width: 351px) {
+  .form--btn {
+    font-size: clamp(0.75rem, -1.185rem + 9.677vw, 0.938rem);
+  }
+}
+
+
+/* '''''' FORM MSGS '''''' */
+
+.form--message {
+  margin-left: 2rem;
+  margin-top: .5rem;
+}
+
+/* ))) MOBILE LANDSCAPE & BELOW ((( */
+@media all and (max-width: 480px) {
+  .form--message {
+    margin: 0;
+  }
+}
+
+
+/* ..... ERROR MESSAGE ..... */
+
+.form--error {
+  display: none;
+  color: var(--fc-inp-err);
+  font-size: var(--fs-inp-err);
+  font-style: var(--fstyle-inp-err);
+  font-weight: var(--fw-inp-err);
+  line-height: var(--lh-inp-err);
+}
+
+/* ))) TABLET ((( */
+@media (max-width: 768px) {
+  .form--error {
+    font-size: var(--fs-inp-err-tab);
+    line-height: var(--lh-inp-err-tab);
+  }
+}
+
+/* ))) MOBILE LANDSCAPE & BELOW ((( */
+@media (max-width: 480px) {
+  .form--error {
+    font-size: var(--fs-inp-err-mob);
+    line-height: var(--lh-inp-err-mob);
+  }
+}
+
+
+/* ..... SUCCESS MESSAGE ..... */
+
+.form--success {
+  display: none;
+  color: var(--fc-inp-succ);
+  font-size: var(--fs-inp-succ);
+  font-style: var(--fstyle-inp-succ);
+  font-weight: var(--fw-inp-succ);
+  line-height: var(--lh-inp-succ);
+}
+
+/* ))) TABLET ((( */
+@media all and (max-width: 768px) {
+  .form--success {
+    font-size: var(--fs-inp-succ-tab);
+    line-height: var(--lh-inp-succ-tab);
+  }
+}
+
+/* ))) MOBILE LANDSCAPE & BELOW ((( */
+@media all and (max-width: 480px) {
+  .form--success {
+    font-size: var(--fs-inp-succ-mob);
+    line-height: var(--lh-inp-succ-mob);
+  }
+}
+
+
+/* ***** LOGOS ***** */
+
+/* ))) DEFAULT- DESKTOP, TABLET ((( */
+.logos-wrap--mob {
+  display: none;
+}
+
+.logos--spotify {
+  margin-right: 2.5rem;
+}
+
+.logos--apple {
+  margin-right: 2.5rem;
+}
+
+.logos--google {
+  margin-right: 1.6875rem;
+}
+
+.logos--pocketcasts {}
+
+
+/* ))) SHRINK LOGOS TO FIT WIDTH ((( */
+@media all and (min-width: 480px) and (max-width: 620px) {
+  .logos--spotify {
+    width: clamp(5.688rem, 4.616rem + 3.571vw, 6rem);
+    margin-right: clamp(1.438rem, -2.34rem + 12.593vw, 2.5rem);
+  }
+
+  .logos--apple {
+    width: clamp(4.688rem, 4.045rem + 2.143vw, 4.875rem);
+    margin-right: clamp(1.563rem, -1.993rem + 11.852vw, 2.563rem);
+  }
+
+  .logos--google {
+    width: clamp(7.375rem, 5.875rem + 5vw, 7.813rem);
+    margin-right: clamp(1rem, -1.444rem + 8.148vw, 1.688rem);
+  }
+
+  .logos--pocketcasts {
+    width: clamp(6.375rem, 0.589rem + 19.286vw, 8.063rem);
+  }
+}
+
+/* ))) MOBILE LANDSCAPE & MOBILE ((( */
+@media all and (max-width: 480px) {
+  .logos-wrap {
+    display: none;
+  }
+
+  .logos-wrap--mob {
+    display: block;
+    margin-bottom: 3rem;
+  }
+
+  .logos--spotify--mob {
+    width: 3.5rem;
+    margin-right: 1.4375rem;
+  }
+
+  .logos--apple--mob {
+    width: 2.8125rem;
+    margin-right: 1.5625rem;
+  }
+
+  .logos--google--mob {
+    width: 4.5625rem;
+    margin-right: 1rem;
+  }
+
+  .logos--pocketcasts--mob {
+    width: 4.8125rem;
+  }
+}
+
+/* ))) SMALL MOBILE & BELOW ((( */
+@media all and (max-width: 351px) {
+  .logos-wrap--mob {
+    width: 12.5rem;
+    margin-inline: auto;
+  }
+}
+
+
+/* ===== DOTS ===== */
+
+/* ))) SMALL DESKTOP & ABOVE ((( */
+@media all and (min-width: 1024px) {
+  .dots-wrap img {
+    position: absolute;
+    right: 0;
+    transform: translateY(-3.25rem);
+  }
+}
+
+/* ))) TABLET LANDSCAPE ((( */
+/* ::::: to remove dots to prevent overlap into content and gap from below for better design UX (change below tablet MQ max-width to 768px) */
+/* @media all and (min-width: 769px) and (max-width: 1024px) {
+  .dots-wrap {
+    display: none;
+  }
+} */
+
+/* ))) TABLET ((( */
+@media all and (min-width: 480px) and (max-width: 1024px) {
+  .dots-wrap img {
+    margin-top: 9.5625rem;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+/* ))) MOBILE LANDSCAPE & BELOW ((( */
+@media all and (max-width: 480px) {
+  .dots-wrap {
+    display: none;
+  }
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {  
+  margin-top: auto;
+  color: var(--fc-footer);
+  font-size: var(--fs-footer);
+  text-align: center;
+}
+
+footer a {
+  color: var(--fc-footer-a);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--fc-footer-a-hov);
+}
+
+footer a:visited {
+  color: var(--fc-footer-a-vis);
+}

@@ -1,0 +1,204 @@
+:root {
+
+  /* >>> Clamp calculator: 
+  /*@ https://www.marcbacon.com/tools/clamp-calculator/ */
+
+  /* >>> Media Queries Cheat Sheet: 
+  /*@ https://gist.github.com/bartholomej/8415655 */
+
+
+  /* ===== media queries ===== */
+  /* 
+    1280-1440   - large desktop (default)
+    1280-1024   - small desktop
+    1024-768    - tablet landscape
+    768-480     - tablet 
+    480-less    - phone landscape & smaller
+    351- less   - small mobile & smaller
+  */
+
+  /* ))) LARGE DESKTOP (default) ((( */
+  /* @media all and (min-width: 1280px) and (max-width: 1440px) {} */
+
+  /* ))) SMALL DESKTOP ((( */
+  /* @media all and (min-width: 1024px) and (max-width: 1280px) {} */
+
+  /* ))) TABLET LANDSCAPE ((( */
+  /* @media all and (min-width: 768px) and (max-width: 1024px) {} */
+
+  /* ))) TABLET ((( */
+  /* @media all and (min-width: 480px) and (max-width: 768px) {} */
+
+  /* ))) MOB LANDSCAPE & BELOW ((( */
+  /* @media all and (max-width: 480px) {} */
+
+  /* ))) SMALL MOB & BELOW ((( */
+  /* @media all and (max-width: 351px) {} */
+
+
+  /* ===== colors ===== */
+
+  --green: #54E6AF;
+  --lt-green: #B3FFE2;
+  --white: #FFF;
+  --dk-navy: #121725;
+  --dk-g-blue: #2C344B;
+  --m-g-blue: #5A668A;
+  --lt-g-blue: #C2CBE5;
+  --red: #FB3E3E;
+
+  --bg-body: var(--dk-navy);
+  --bg-content: var(--dk-navy);
+
+
+  /* ===== fonts ===== */
+
+  --ff: 'Chivo', sans-serif;
+
+
+  /* ===== typography ===== */
+
+  /* ***** font-color ***** */
+
+  --fc-body: var(--lt-g-blue);
+  --fc-h1: var(--green);
+  --fc-h1-span: var(--white);
+  --fc-p: var(--fc-body);
+
+
+  /* ***** font-family ***** */
+
+  --ff-body: 'Chivo', sans-serif;
+  --ff-h1: var(--ff-body);
+  --ff-p: var(--bg-body);
+
+
+  /* ***** font-size ***** */
+
+  --fs-body: 1.125rem;
+  --fs-body-tab: 1.125rem;
+  --fs-body-mob: .9375rem;
+  --fs-h1: clamp(3rem, 2.777rem + 0.526vw, 3.25rem);
+  --fs-h1-tab: clamp(1.625rem, 0.313rem + 5.598vw, 3rem);
+  --fs-h1-mob: 1.625rem;
+  --fs-h1-sm-mob: clamp(1.375rem, -1.206rem + 12.903vw, 1.625rem);
+  --fs-p: 1.125rem;
+  --fs-p-tab: clamp(0.938rem, 0.759rem + 0.763vw, 1.125rem);
+  --fs-p-mob: .9375rem;
+  --fs-p-sm-mob: clamp(0.75rem, -1.185rem + 9.677vw, 0.938rem);
+
+
+  /* ***** font-style ***** */
+
+  --fstyle-body: normal;
+  --fstyle-h1: uppercase;
+  --fstyle-p: normal;
+
+
+  /* ***** font-weight ***** */
+
+  --fw-100: 100;
+  --fw-200: 200;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-700: 700;
+  --fw-900: 900;
+
+  --fw-body: var(--fw-400);
+  --fw-h1: var(--fw-100);
+  --fw-p: var(--fw-100);
+
+
+  /* ***** line-height ***** */
+
+  --lh-body: 1.75rem;
+  --lh-body-tab: 1.75rem;
+  --lh-body-mob: 1.5625rem;
+  --lh-h1: 3.875rem;
+  --lh-h1-tab: 3.5rem;
+  --lh-h1-mob: 2.375rem;
+  --lh-p: 1.75rem;
+  --lh-p-tab: 1.75rem;
+  --lh-p-mob: 1.5625rem;
+
+
+  /* ===== form ===== */
+
+  --bg-form: var(--dk-g-blue);
+  --bdrs-form: 1.75rem;
+
+
+  /* ***** input ***** */
+
+  --bdrs-inp: 1.75rem;
+
+  --fc-inp-act: var(--white);
+  --fc-inp-ph: hsl(0, 0%, 50%);
+  --fc-inp-err: var(--red);
+  --fc-inp-succ: var(--green);
+
+  --ff-inp: var(--ff-body);
+
+  --fs-inp: .875rem;
+  --fs-inp-tab: .875rem;
+  --fs-inp-mob: .875rem;
+  --fs-inp-err: .75rem;
+  --fs-inp-err-tab: .75rem;
+  --fs-inp-err-mob: .75rem;
+  --fs-inp-succ: .75rem;
+  --fs-inp-succ-tab: .75rem;
+  --fs-inp-succ-mob: .75rem;
+
+  --fstyle-inp: normal;
+  --fstyle-inp-err: normal;
+  --fstyle-inp-succ: normal;
+
+  --fw-inp: var(--fw-700);
+  --fw-inp-err: var(--fw-700);
+  --fw-inp-succ: var(--fw-700);
+
+  --lh-inp: 1.75rem;
+  --lh-inp-tab: 1.75rem;
+  --lh-inp-mob: 1.75rem;
+  --lh-inp-err: normal;
+  --lh-inp-err-tab: normal;
+  --lh-inp-err-mob: normal;
+  --lh-inp-succ: normal;
+  --lh-inp-succ-tab: normal;
+  --lh-inp-succ-mob: normal;
+
+
+  /* ***** button ***** */
+
+  --bg-btn: var(--green);
+  --bg-btn-hov: var(--lt-green);
+  --bxs-btn: 0px 25px 20px -20px rgba(84, 230, 175, 0.20);
+  --bdrs-btn: 1.75rem;
+
+  --fc-btn: var(--dk-navy);
+  --fc-btn-hov: var(--dk-navy);
+
+  --ff-btn: var(--ff-body);
+
+  --fs-btn: .875rem;
+  --fs-btn-tab: .875rem;
+  --fs-btn-mob: .875rem;
+
+  --fstyle-btn: normal;
+
+  --fw-btn: var(--fw-700);
+  --fw-btn-hov: var(--fw-700);
+
+  --lh-btn: 1.75rem;
+  --lh-btn-tab: 1.75rem;
+  --lh-btn-mob: 1.75rem;
+
+
+  /* ===== footer ===== */
+
+  --fc-footer: #ffffff;
+  --fc-footer-a: #ff52bf;
+  --fc-footer-a-hov: #ffff00;
+  --fc-footer-a-vis: #800080;
+  --fs-footer: .6875rem;
+}
