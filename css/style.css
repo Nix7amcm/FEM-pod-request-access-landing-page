@@ -156,7 +156,7 @@ main {
   position: relative;
   margin: auto;
   padding-top: 8.25rem;
-  transform: translateY(-1.75rem);
+  transform: translateY(-2.25rem);
 }
 
 main::before {
@@ -519,6 +519,12 @@ form {
 
 
 /* ***** LOGOS ***** */
+
+.logo {
+  /*----- change logos SVG color to #2C344B to match design:
+  /* @ https://isotropic.co/tool/hex-color-to-css-filter/ */
+  filter: invert(18%) sepia(42%) saturate(494%) hue-rotate(187deg) brightness(90%) contrast(91%);
+}
 
 /* ))) DEFAULT- DESKTOP, TABLET ((( */
 .logos-wrap--mob {
