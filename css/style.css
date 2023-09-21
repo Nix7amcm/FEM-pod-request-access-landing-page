@@ -647,6 +647,7 @@ form {
 /* ===== FOOTER ===== */
 
 footer {
+  z-index: 1; /*<--- fix for footer to sit above body::before (urls became unclickable) */
   margin-top: auto;
   color: var(--fc-footer);
   font-size: var(--fs-footer);
