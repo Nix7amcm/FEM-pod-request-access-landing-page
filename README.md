@@ -63,13 +63,13 @@ Users should be able to:
 
 ### What I learned
 
-For this project, I aimed to practice positioning elements without relying on Grid or Flexbox, making it a straightforward exercise. I only introduced flexbox to the `body` at the end when adding the footer attribution to ensure it stays at the bottom of the page, separating it from the `main` content, while keeping it easily visible and accessible.
+For this project, I aimed to practice positioning elements without relying on Grid or Flexbox, as it seemed a straightforward exercise in this regard. I only introduced flexbox to the `body` at the end when adding the footer attribution to ensure it stays at the bottom of the page, separating it from the `main` content, while keeping it easily visible and accessible.
 
-I adopted a desktop-first styling approach, which I'm most familiar with at the moment. However, I plan to explore a mobile-first approach in future projects, recognizing its growing popularity. To achieve responsiveness, I employed CSS media queries to adjust styles, visibility, positions, and content based on screen size, from large desktop displays to small mobile screens. My attention to detail was crucial in maintaining a consistent and user-friendly design across all devices. Instead of relying solely on fixed sizes from the design file, I opted for scalability by using the CSS `clamp()` function for text and some padding, enhancing the page's responsiveness.
+I adopted a desktop-first styling approach, which I'm most familiar with at the moment. However, I plan to explore a mobile-first approach more in future projects, recognizing its growing popularity. To achieve responsiveness, I employed CSS media queries to adjust styles, visibility, positions, and content based on screen size, from large desktop displays to small mobile screens. My attention to detail was crucial in maintaining a consistent and user-friendly design across all devices. Instead of relying solely on fixed sizes from the design file, I opted for scalability by using the CSS `clamp()` function for text and some padding, enhancing the page's responsiveness.
 
-I applied the mask images to the backgrounds using `::before` pseudo-classes and used `transform: translate()` to offset elements appropriately. Although there are various approaches to handling layout and responsiveness in this design, I challenged myself to avoid using Flexbox and Grid. While it was initially tricky, I persevered and am happy with the result.
+I applied the mask images to the backgrounds using `::before` pseudo-classes and used `transform: translate()` to offset elements appropriately. Although there are various approaches to handling layout and responsiveness in this design, I challenged myself to avoid using Flexbox and Grid. While it turned out to be more tricky initially, I persevered and am happy with the result.
 
-I honed my DOM manipulation skills with Vanilla JS, adding logic to interact with the `.messages` elements in the `form`. Event listeners and Regex functions ensured that the messages remained hidden, and the relevant message displays based on the submitted value. Additionally, I included an extra message for successful email submissions to improve accessibility and usability for all users.
+I honed my DOM manipulation skills with Vanilla JS, adding logic to interact with the `.messages` elements in the `form`. Event listeners and Regex functions ensure that the messages remain hidden, and the relevant message displays based on the submitted value. Additionally, I included an extra message for successful email submissions to improve accessibility and usability for all users.
 
 This project provided an excellent opportunity to practice and enhance a wide range of skills.
 
@@ -79,7 +79,7 @@ This project provided an excellent opportunity to practice and enhance a wide ra
 
 - [Media Queries Cheat Sheet](https://gist.github.com/bartholomej/8415655) - I frequently refer to this for media queries. It's extensive, easy to follow and overall a great resource to have in your bookmarks for quick reference!
 
-- [Hex Color To CSS Filter Converter](https://isotropic.co/tool/hex-color-to-css-filter/) - I found this fantastic tool for converting any hex colour into its matching `filter` property. Another great resource for the arsenal!
+- [Hex Color To CSS Filter Converter](https://isotropic.co/tool/hex-color-to-css-filter/) - I found this fantastic tool for converting any hex colour into its matching `filter` property. Another great resource for the dev arsenal!
 
 ---
 
